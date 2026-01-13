@@ -1,0 +1,11 @@
+<script>
+const CDN = 'https://images.unsplash.com';
+const API = 'https://api.esteelit.demo'; // şimdilik dummy
+
+function imgUrl(slug, {w=1200,h=700}={}) {
+  // Demo: sabit bir foto ve boyut parametreleri
+  const base = CDN + '/photo-1520974747644-0f2aeea4c586';
+  return base + `?w=${w}&h=${h}&fit=crop`;
+}
+// ... geri kalan JS önceki dosyada aynı
+</script>

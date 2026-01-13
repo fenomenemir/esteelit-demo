@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Hizmet Detayı | EsteElit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <script>
+    const titles = {
+      "burun-estetigi":"Burun Estetiği",
+      "yuz-germe":"Yüz Germe",
+      "meme-estetigi":"Meme Estetiği",
+      "vucut-sekillendirme":"Vücut Şekillendirme",
+      "fue":"FUE Saç Ekimi",
+      "dhi":"DHI Saç Ekimi",
+      "safir-teknigi":"Safir Saç Ekimi",
+      "botoks":"Botoks",
+      "dolgu":"Dolgu",
+      "mezoterapi":"Mezoterapi"
+    };
+    function getSlug(){
+      const p = new URLSearchParams(location.search);
+      return p.get("slug") || "burun-estetigi";
+    }
+    function setContent(){
+      const slug = getSlug();
+      const title = titles[slug] || "Hizmet Detayı";
+      document.getElementById("title").textContent = title;
+      document.getElementById("lead").textContent =
+        "EsteElit uzmanlığıyla " + title.toLowerCase() + " hakkında öne çıkan bilgiler.";
+      document.getElementById("heroimg").src = "https://picsum.photos/seed/"+slug+"/960/540";
+      document.getElementById("heroimg").alt = title;
+    }
+    document.addEventListener("DOMContentLoaded", setContent);
+  </script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/"><img src="assets/logo.svg" alt="Logo"><h1>EsteElit</h1></a>
+    <nav>
+      <a href="plastik-cerrahi.html">Plastik Cerrahi</a>
+      <a href="sac-ekimi.html">Saç Ekimi</a>
+      <a href="medikal-estetik.html">Medikal Estetik</a>
+      <a href="blog.html">Blog/TV</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="detail-hero">
+      <img id="heroimg" src="" alt="">
+      <div>
+        <h2 id="title">Hizmet Detayı</h2>
+        <p id="lead">EsteElit uzmanlığıyla seçtiğiniz hizmet hakkında öne çıkan bilgiler.</p>
+        <div class="actions">
+          <a class="button primary" href="#randevu">Danışma Talebi</a>
+          <a class="button" href="/">Ana Sayfa</a>
+        </div>
+        <div class="sss">
+          <h3 class="section-title">Sık Sorulan Sorular</h3>
+          <details><summary>Kimler için uygundur?</summary><p>Uzman değerlendirmesi sonrası kişiye özel planlama yapılır.</p></details>
+          <details><summary>İyileşme süreci nasıldır?</summary><p>Tekniğe göre değişir; genellikle hızlı ve konforludur.</p></details>
+          <details><summary>Riskler ve güvenlik</summary><p>Steril şartlar ve deneyimli ekip ile riskler minimize edilir.</p></details>
+        </div>
+      </div>
+    </div>
+
+    <div class="related">

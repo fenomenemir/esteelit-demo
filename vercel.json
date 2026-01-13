@@ -3,13 +3,11 @@
   "trailingSlash": false,
   "headers": [
     {
-      "source": "/(.*)\\.(png|jpg|jpeg|webp|avif)",
+      "source": "/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
       ]
     }
-  ],
-  "redirects": [
-    { "source": "/tr", "destination": "/", "permanent": false }
   ]
 }

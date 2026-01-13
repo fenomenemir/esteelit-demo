@@ -11,25 +11,31 @@
   <header>
     <a class="brand" href="/"><img src="assets/logo.svg" alt="Logo"><h1>EsteElit</h1></a>
     <nav>
-      <a href="plastik-cerrahi.html">Plastik Cerrahi</a>
-      <a href="sac-ekimi.html">Saç Ekimi</a>
-      <a href="medikal-estetik.html">Medikal Estetik</a>
-      <a href="blog.html">Blog/TV</a>
+      <a data-t="menuPlastic" href="plastik-cerrahi.html">Plastik Cerrahi</a>
+      <a data-t="menuHair" href="sac-ekimi.html">Saç Ekimi</a>
+      <a data-t="menuMedical" href="medikal-estetik.html">Medikal Estetik</a>
+      <a data-t="menuBlog" href="blog.html">Blog/TV</a>
+      <select id="lang" class="lang-select"><option value="tr">Türkçe</option><option value="en">English</option><option value="ar">العربية</option></select>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Plastik Cerrahi</h2>
-    <p>Yüz ve vücut estetiğinde kişiye özel çözümler.</p>
+  <section class="hero banner">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/video/clinic.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Plastik Cerrahi</h2>
+      <p>Yüz ve vücut estetiğinde kişiye özel çözümler.</p>
+    </div>
   </section>
 
   <div class="container">
-    <h3>Operasyonlar</h3>
+    <h3 class="section-title">Operasyonlar</h3>
     <div class="grid">
-      <div class="card" data-image="burun-estetigi"><h3>Burun Estetiği</h3><p>Fonksiyonel ve estetik sonuçlar.</p></div>
-      <div class="card" data-image="yuz-germe"><h3>Yüz Germe</h3><p>Doğal görünümle gençleşme.</p></div>
-      <div class="card" data-image="meme-estetigi"><h3>Meme Estetiği</h3><p>Büyütme, küçültme ve dikleştirme.</p></div>
-      <div class="card" data-image="vucut-sekillendirme"><h3>Vücut Şekillendirme</h3><p>Liposuction ve karın germe.</p></div>
+      <div class="card"><img data-img-key="rhinoplasty"><div class="body"><h3>Burun Estetiği</h3><p>Fonksiyonel ve estetik sonuçlar.</p></div></div>
+      <div class="card"><img data-img-key="facelift"><div class="body"><h3>Yüz Germe</h3><p>Doğal görünümle gençleşme.</p></div></div>
+      <div class="card"><img data-img-key="breast-aesthetics"><div class="body"><h3>Meme Estetiği</h3><p>Büyütme, küçültme ve dikleştirme.</p></div></div>
     </div>
   </div>
 

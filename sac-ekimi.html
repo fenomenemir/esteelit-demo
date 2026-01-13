@@ -8,39 +8,25 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <a class="brand" href="/"><img src="assets/logo.svg" alt="Logo"><h1>EsteElit</h1></a>
-    <nav>
-      <a href="plastik-cerrahi.html">Plastik Cerrahi</a>
-      <a href="sac-ekimi.html">Saç Ekimi</a>
-      <a href="medikal-estetik.html">Medikal Estetik</a>
-      <a href="blog.html">Blog/TV</a>
-    </nav>
-  </header>
+  <header>…</header>
 
-  <section class="hero">
-    <h2>Saç Ekimi</h2>
-    <p>Doğal ve kalıcı sonuçlarla güvenli süreç.</p>
+  <section class="hero banner">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/video/clinic.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Saç Ekimi</h2>
+      <p>Doğal ve kalıcı sonuçlarla güvenli süreç.</p>
+    </div>
   </section>
 
   <div class="container">
     <h3 class="section-title">Teknikler</h3>
     <div class="grid">
-      <div class="card" data-image="fue">
-        <h3>FUE</h3>
-        <p>Minimal iz, hızlı iyileşme.</p>
-        <div class="actions"><a class="button primary" href="detay.html?slug=fue">Detayları Gör</a></div>
-      </div>
-      <div class="card" data-image="dhi">
-        <h3>DHI</h3>
-        <p>Doğrudan ekim, yüksek yoğunluk.</p>
-        <div class="actions"><a class="button primary" href="detay.html?slug=dhi">Detayları Gör</a></div>
-      </div>
-      <div class="card" data-image="safir-teknigi">
-        <h3>Safir</h3>
-        <p>Safir uçla hassas kanallar.</p>
-        <div class="actions"><a class="button primary" href="detay.html?slug=safir-teknigi">Detayları Gör</a></div>
-      </div>
+      <div class="card"><img data-img-key="fue"><div class="body"><h3>FUE</h3><p>Minimal iz, hızlı iyileşme.</p></div></div>
+      <div class="card"><img data-img-key="dhi"><div class="body"><h3>DHI</h3><p>Doğrudan ekim, yüksek yoğunluk.</p></div></div>
+      <div class="card"><img data-img-key="safir-teknigi"><div class="body"><h3>Safir</h3><p>Safir uçla hassas kanallar.</p></div></div>
     </div>
   </div>
 

@@ -8,39 +8,25 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <a class="brand" href="/"><img src="assets/logo.svg" alt="Logo"><h1>EsteElit</h1></a>
-    <nav>
-      <a href="plastik-cerrahi.html">Plastik Cerrahi</a>
-      <a href="sac-ekimi.html">Saç Ekimi</a>
-      <a href="medikal-estetik.html">Medikal Estetik</a>
-      <a href="blog.html">Blog/TV</a>
-    </nav>
-  </header>
+  <header>…</header>
 
-  <section class="hero">
-    <h2>Blog / TV</h2>
-    <p>Uzman içerikler, video anlatımlar ve güncel ipuçları.</p>
+  <section class="hero banner">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/video/clinic.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Blog / TV</h2>
+      <p>Uzman içerikler, video anlatımlar ve güncel ipuçları.</p>
+    </div>
   </section>
 
   <div class="container">
     <h3 class="section-title">Son İçerikler</h3>
     <div class="grid">
-      <div class="card" data-image="trendler">
-        <h3>Ameliyatsız Estetik Trendleri</h3>
-        <p>Bu sezon öne çıkan uygulamalar.</p>
-        <div class="actions"><a class="button primary" href="#">İzle</a><a class="button" href="#">Oku</a></div>
-      </div>
-      <div class="card" data-image="sac-ekimi-blog">
-        <h3>Saç Ekiminde Sık Sorulanlar</h3>
-        <p>Uzman yanıtlarıyla net bilgiler.</p>
-        <div class="actions"><a class="button primary" href="#">İzle</a><a class="button" href="#">Oku</a></div>
-      </div>
-      <div class="card" data-image="hazirlik">
-        <h3>Operasyon Öncesi Hazırlık</h3>
-        <p>Konforlu bir süreç için temel adımlar.</p>
-        <div class="actions"><a class="button primary" href="#">İzle</a><a class="button" href="#">Oku</a></div>
-      </div>
+      <div class="card"><img data-img-key="medical-skin"><div class="body"><h3>Ameliyatsız Estetik Trendleri</h3><p>Bu sezon öne çıkan uygulamalar.</p></div></div>
+      <div class="card"><img data-img-key="fue"><div class="body"><h3>Saç Ekiminde Sık Sorulanlar</h3><p>Uzman yanıtlarıyla net bilgiler.</p></div></div>
+      <div class="card"><img data-img-key="rhinoplasty"><div class="body"><h3>Operasyon Öncesi Hazırlık</h3><p>Konforlu bir süreç için temel adımlar.</p></div></div>
     </div>
   </div>
 

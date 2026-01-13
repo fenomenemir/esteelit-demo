@@ -2,48 +2,129 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>EsteElit | Ana Sayfa</title>
+  <title>EsteElit | Estetiğin Yeni Adı</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style.css" rel="stylesheet">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <a class="brand" href="/"><img src="assets/logo.svg" alt="Logo"><h1>EsteElit</h1></a>
     <nav>
-      <a href="plastik-cerrahi.html">Plastik Cerrahi</a>
-      <a href="sac-ekimi.html">Saç Ekimi</a>
-      <a href="medikal-estetik.html">Medikal Estetik</a>
-      <a href="blog.html">Blog/TV</a>
+      <a data-t="menuPlastic" href="plastik-cerrahi.html">Plastik Cerrahi</a>
+      <a data-t="menuHair" href="sac-ekimi.html">Saç Ekimi</a>
+      <a data-t="menuMedical" href="medikal-estetik.html">Medikal Estetik</a>
+      <a data-t="menuBlog" href="blog.html">Blog/TV</a>
+      <select id="lang" class="lang-select">
+        <option value="tr">Türkçe</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+      </select>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Güzellik ve Sağlıkta Elit Seçim</h2>
-    <p>EsteElit ile profesyonel estetik çözümler</p>
+  <!-- Hero (video arka plan) -->
+  <section class="hero banner">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/video/clinic.mp4" type="video/mp4">
+      Tarayıcınız video etiketini desteklemiyor.
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+      <h2 data-t="heroTitle">Estetiğin Yeni Adı: EsteElit</h2>
+      <p data-t="heroDesc">Profesyonel Saç Ekimi, Estetik Cerrahi ve Medikal Estetik Hizmetleri</p>
+      <div class="actions" style="margin-top:14px;">
+        <a class="button accent" href="#consult" data-t="freeConsult">ÜCRETSİZ DANIŞMA AL</a>
+      </div>
+    </div>
   </section>
 
+  <!-- Hizmetler -->
   <div class="container">
-    <h3>Öne Çıkan Hizmetler</h3>
+    <h3 class="section-title" data-t="services">Hizmetlerimiz</h3>
     <div class="grid">
-      <div class="card" data-image="plastik-cerrahi">
-        <h3>Plastik Cerrahi</h3>
-        <p>Yüz ve vücut estetiğinde uzman yaklaşım.</p>
-        <div class="actions"><a class="button primary" href="plastik-cerrahi.html">Detayları Gör</a></div>
+      <div class="card icon">
+        <img data-img-key="hair-card" alt="Saç Ekimi">
+        <div class="body">
+          <h3 data-t="hair">Saç Ekimi</h3>
+          <p data-t="hairDesc">FUE, DHI ve ileri teknik saç ekimi çözümleri</p>
+        </div>
+        <div class="actions"><a class="button accent" href="sac-ekimi.html" data-t="details">Detaylar</a></div>
       </div>
-      <div class="card" data-image="sac-ekimi">
-        <h3>Saç Ekimi</h3>
-        <p>Doğal ve kalıcı çözümler.</p>
-        <div class="actions"><a class="button primary" href="sac-ekimi.html">Detayları Gör</a></div>
+
+      <div class="card icon">
+        <img data-img-key="plastic-card" alt="Plastik Cerrahi">
+        <div class="body">
+          <h3 data-t="plastic">Plastik Cerrahi</h3>
+          <p data-t="plasticDesc">Burun estetiği, yüz germe ve daha fazlası</p>
+        </div>
+        <div class="actions"><a class="button accent" href="plastik-cerrahi.html" data-t="details">Detaylar</a></div>
       </div>
-      <div class="card" data-image="medikal-estetik">
-        <h3>Medikal Estetik</h3>
-        <p>Ameliyatsız güzellik.</p>
-        <div class="actions"><a class="button primary" href="medikal-estetik.html">Detayları Gör</a></div>
+
+      <div class="card icon">
+        <img data-img-key="medical-card" alt="Medikal Estetik">
+        <div class="body">
+          <h3 data-t="medical">Medikal Estetik</h3>
+          <p data-t="medicalDesc">Dolgu, botoks, cilt bakımı</p>
+        </div>
+        <div class="actions"><a class="button accent" href="medikal-estetik.html" data-t="details">Detaylar</a></div>
       </div>
     </div>
   </div>
 
+  <!-- Hakkımızda -->
+  <div class="container">
+    <div class="split">
+      <div>
+        <h3 class="section-title" data-t="about">Hakkımızda</h3>
+        <p data-t="aboutDesc">EsteElit, deneyimli hekimlerle etik ve profesyonel hizmet sunar.</p>
+        <div class="actions">
+          <a class="button accent" href="#experience" data-t="ourExp">BİZİM DENEYİMİMİZ</a>
+        </div>
+      </div>
+      <img data-img-key="clinic" alt="Klinik">
+    </div>
+  </div>
+
+  <!-- Öncesi & Sonrası -->
+  <div class="container">
+    <h3 class="section-title" data-t="beforeAfter">Öncesi & Sonrası</h3>
+    <div class="before-after">
+      <img data-img-key="before" alt="Öncesi">
+      <img data-img-key="after" alt="Sonrası">
+    </div>
+  </div>
+
+  <!-- İletişim -->
+  <div class="container" id="consult">
+    <h3 class="section-title" data-t="contact">İletişim</h3>
+    <div class="split">
+      <div class="contact-card">
+        <form action="#" method="post">
+          <label data-t="nameLabel">Adınız</label>
+          <input type="text" name="name" placeholder="Adınız" style="width:100%;padding:10px;border-radius:10px;border:1px solid #ddd;margin-bottom:10px">
+          <label data-t="phoneLabel">Telefon</label>
+          <input type="tel" name="phone" placeholder="05xx xxx xx xx" style="width:100%;padding:10px;border-radius:10px;border:1px solid #ddd;margin-bottom:10px">
+          <label data-t="messageLabel">Mesajınız</label>
+          <textarea name="message" rows="4" placeholder="Mesajınız" style="width:100%;padding:10px;border-radius:10px;border:1px solid #ddd;margin-bottom:10px"></textarea>
+          <button class="button primary" type="submit" data-t="send">Gönder</button>
+        </form>
+      </div>
+      <img data-img-key="map" alt="Harita">
+    </div>
+  </div>
+
+  <!-- WhatsApp & Mesaj bırak -->
+  <div class="floating-wrap">
+    <div id="welcome-bubble" class="welcome-bubble">Hoş geldiniz! Nasıl yardımcı olabilirim?</div>
+    <a class="floating-btn" href="https://wa.me/905062140901?text=Merhaba%20EsteElit!%20Nas%C4%B1l%20yard%C4%B1mc%C4%B1%20olabilirim%3F">
+      <span>💬</span><span>WhatsApp</span>
+    </a>
+    <a class="floating-btn msg" href="#consult"><span>✉️</span><span>Mesaj bırak</span></a>
+  </div>
+
+  <!-- Footer -->
   <footer>© 2026 EsteElit. Tüm hakları saklıdır.</footer>
 </body>
 </html>

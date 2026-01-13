@@ -7,6 +7,18 @@
   <link href="style.css" rel="stylesheet">
   <script src="script.js" defer></script>
   <script>
+    const imgKeyBySlug = {
+      "burun-estetigi":"rhinoplasty",
+      "yuz-germe":"facelift",
+      "meme-estetigi":"breast-aesthetics",
+      "vucut-sekillendirme":"drops",
+      "fue":"fue",
+      "dhi":"dhi",
+      "safir-teknigi":"safir-teknigi",
+      "botoks":"medical-botox",
+      "dolgu":"medical-filler",
+      "mezoterapi":"medical-skin"
+    };
     const titles = {
       "burun-estetigi":"Burun Estetiği",
       "yuz-germe":"Yüz Germe",
@@ -27,42 +39,46 @@
       const slug = getSlug();
       const title = titles[slug] || "Hizmet Detayı";
       document.getElementById("title").textContent = title;
-      document.getElementById("lead").textContent =
-        "EsteElit uzmanlığıyla " + title.toLowerCase() + " hakkında öne çıkan bilgiler.";
-      document.getElementById("heroimg").src = "https://picsum.photos/seed/"+slug+"/960/540";
-      document.getElementById("heroimg").alt = title;
+      const key = imgKeyBySlug[slug] || "medical-skin";
+      document.getElementById("heroimg").setAttribute("data-img-key", key);
     }
     document.addEventListener("DOMContentLoaded", setContent);
   </script>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <a class="brand" href="/"><img src="assets/logo.svg" alt="Logo"><h1>EsteElit</h1></a>
     <nav>
-      <a href="plastik-cerrahi.html">Plastik Cerrahi</a>
-      <a href="sac-ekimi.html">Saç Ekimi</a>
-      <a href="medikal-estetik.html">Medikal Estetik</a>
-      <a href="blog.html">Blog/TV</a>
+      <a data-t="menuPlastic" href="plastik-cerrahi.html">Plastik Cerrahi</a>
+      <a data-t="menuHair" href="sac-ekimi.html">Saç Ekimi</a>
+      <a data-t="menuMedical" href="medikal-estetik.html">Medikal Estetik</a>
+      <a data-t="menuBlog" href="blog.html">Blog/TV</a>
+      <select id="lang" class="lang-select">
+        <option value="tr">Türkçe</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+      </select>
     </nav>
   </header>
 
+  <!-- Hero / içerik -->
   <div class="container">
-    <div class="detail-hero">
-      <img id="heroimg" src="" alt="">
+    <div class="split">
+      <img id="heroimg" data-img-key="" alt="">
       <div>
         <h2 id="title">Hizmet Detayı</h2>
-        <p id="lead">EsteElit uzmanlığıyla seçtiğiniz hizmet hakkında öne çıkan bilgiler.</p>
+        <p>EsteElit uzmanlığıyla seçtiğiniz hizmet hakkında öne çıkan bilgiler.</p>
         <div class="actions">
-          <a class="button primary" href="#randevu">Danışma Talebi</a>
+          <a class="button primary" href="#consult">Danışma Talebi</a>
           <a class="button" href="/">Ana Sayfa</a>
         </div>
-        <div class="sss">
-          <h3 class="section-title">Sık Sorulan Sorular</h3>
-          <details><summary>Kimler için uygundur?</summary><p>Uzman değerlendirmesi sonrası kişiye özel planlama yapılır.</p></details>
-          <details><summary>İyileşme süreci nasıldır?</summary><p>Tekniğe göre değişir; genellikle hızlı ve konforludur.</p></details>
-          <details><summary>Riskler ve güvenlik</summary><p>Steril şartlar ve deneyimli ekip ile riskler minimize edilir.</p></details>
-        </div>
-      </div>
-    </div>
 
-    <div class="related">
+        <!-- Form -->
+        <div class="contact-card" id="consult" style="margin-top:16px">
+          <form action="#" method="post">
+            <label>Adınız</label>
+            <input type="text" name="name" placeholder="Adınız" style="width:100%;padding:10px;border-radius:10px;border:1px solid #ddd;margin-bottom:10px">
+            <label>Telefon</label>
+            <input type="tel" name="phone" placeholder="05xx xxx xx xx" style="width:100%;padding:10px;border-radius:10px;border:1px solid #ddd;margin-bottom:10px">
+            <label>Mesajınız</label>
